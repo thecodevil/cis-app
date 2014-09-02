@@ -1,0 +1,28 @@
+<div class="padding-left20 padding-right20">
+	<ul class="list-view">
+		<li class="list-view-cell cell-media">
+			<div>课程名称：{{course.title}}</div>
+		</li>
+		<li class="list-view-cell cell-media">
+			<div>上课班级：{{course.classname}}</div>
+		</li>
+		<li class="list-view-cell cell-media">
+			<div>上课时间：{{course.createdAt | date:"yyyy-MM-dd hh:mm:ss"}}</div>
+		</li>
+		<li class="list-view-cell cell-media">
+			<a href="javascript:void(0);" class="navigate-right" ui-sref="courses.students">
+				<div class="cell-media-body">
+					上课人数：{{course.numOfStudent}}
+				</div>
+			</a>
+		</li>
+		<li class="list-view-cell cell-media">
+			<a href="javascript:void(0);" class="navigate-right" ui-sref="courses.exercises" href="javascript:void(0);">
+				<div class="cell-media-body">
+					问题数量：{{course.numOfExercise}}
+				</div>
+			</a>
+		</li>
+	</ul>
+	<a href="javascript:void(0);" class="btn btn-primary form-control" ng-click="beginClass()">上课</a>
+</div>

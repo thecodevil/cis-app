@@ -1,0 +1,14 @@
+<div class="list-center">
+  <ul class="list-view list-center" ng-repeat="student in students">
+    <li id="stu-status" class="list-view-cell cell-media">
+      <a class="navigate-right" href="javascript:void(0);" ng-click="$state.needReturn=true;toStudentAnswerList(student)">
+      <i class="fa fa-lg pull-left" ng-class='student.status'></i>
+      <div class="cell-media-body">
+        {{student.name}}
+        <p>{{student.currentAnwer}}</p>
+      </div>
+    </a>
+  </li>
+</ul>
+</div>
+<a class="sreen-prev" href="javascript:void(0);" ui-sref="teacher"></a>

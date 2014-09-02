@@ -1,0 +1,161 @@
+html, body, .app-container{height:100%;width: 100%;}
+body {text-align: center;font-family: 'Microsoft YaHei';display: block;margin: 0;padding: 0;overflow:hidden;min-height: 400px;  text-align: left;}
+
+/** app-header **/
+.app-header {position: absolute;right: 0;left: 0;color: white;background-color: #2b2b2b;height: 60px;font-size: 15px;padding:15px 30px 10px 15px;z-index:9999;}
+.app-header .fa-ellipsis-v {padding:0 35px;margin-right: -30px;}
+.app-header .title {font-weight:normal;font-size: 15px;color: white !important;margin-left: 7px;}
+.app-header .fa-angle-left {margin-right: 8px;width:10px;}
+.app-header i {font-size: 30px;}
+
+/* app-content **/
+.app-content {width: 100%;position: absolute;top: 60px;bottom: 50px;padding:0;overflow: auto;z-index:2;}
+/*.app-bottom-bar + .app-content {bottom:50px;}
+.app-bottom-bar[class~='ng-hide'] + .app-content {bottom:0;}*/
+
+.app-content-padding {padding:0 20px;}
+.app-content-padding2 {padding:0 20px;}
+.app-content-center {margin:auto;width: 90%;margin-top: 10px;padding-top:75px;}
+.list-center {margin:auto;width: 90%;}
+.app-content::-webkit-scrollbar { width: 4.5px;height: 1px;border: none;background: transparent;}
+.app-content::-webkit-scrollbar-track-piece {border: none;position: absolute;padding: 0;box-shadow: none;background-color: rgba(0, 0, 0, 0.07);border-radius: 30px;}
+.app-content::-webkit-scrollbar-thumb:vertical {background-color: rgba(0, 0, 0, 0.18);border-radius: 30px;border: none;}
+.app-content::-webkit-scrollbar-thumb:horizontal {background-color: rgba(0, 0, 0, 0.18);border-radius: 30px;border: none;}
+
+/** tips **/
+.tips {height:40px;width: 300px;position:absolute;padding: 10px 10px;color: white;text-align: center;border-radius: 5px;border: 1px solid #ac2925;background-color: #c9302c;top:50%;margin-top:-20px;left:50%;margin-left:-150px;}
+.tips i {margin-right: 5px;}
+.tips p {color: white;}
+
+
+/** bar **/
+.app-bottom-bar {bottom: 0;display: table;width: 100%;height: 50px;padding: 0;table-layout: fixed;border-top: 1px solid #ddd;border-bottom: 0;position: fixed;right: 0;left: 0;z-index: 10;background-color: white;}
+.app-bottom-bar .app-tab-item {display: table-cell;width: 1%;height: 50px;color: #929292;text-align: center;vertical-align: middle;padding-top:5px;}
+
+
+/** list-view **/
+.list-view {margin:0;padding:0;margin-bottom: 15px;list-style: none;z-index: -1000;background-color: #fff;border-bottom: 1px solid #ddd;}
+.list-view p {font-size: 14px;color: #777;}
+.list-view .cell-media, .list-view .cell-media-body {overflow: hidden;}
+.list-view-cell {position: relative;padding: 0px 15px 11px 15px;border-bottom: 1px solid #ddd;}
+.list-view-cell:last-child {border-bottom: 0;}
+.list-view-cell > a:not(.btn) {position: relative;display: block;/*margin: -11px -65px -11px -15px;*/overflow: hidden;color: inherit;}
+.cell-media {margin-top: 15px;}
+.cell-media-body {zoom:1;word-break:break-all !important;}
+.cell-media-body p:first-child {font-size: 18px;font-weight: bold;color: black;line-height:1px;}
+
+
+/** common **/
+textarea {width: 100%;padding: 5px 5px !important;border-radius: 4px;border:1px solid #ccc;}
+textarea::-webkit-scrollbar { width: 4px;height: 1px;border: none;background: transparent;}
+textarea::-webkit-scrollbar-track-piece {border: none;position: absolute;padding: 0;box-shadow: none;background-color: rgba(0, 0, 0, 0.07);border-radius: 30px;}
+textarea::-webkit-scrollbar-thumb:vertical {background-color: rgba(0, 0, 0, 0.18);border-radius: 30px;border: none;}
+textarea::-webkit-scrollbar-thumb:horizontal {background-color: rgba(0, 0, 0, 0.18);border-radius: 30px;border: none;}
+a, a:link, a:hover {text-decoration: none;color: #fff;}
+nav a div.fa {color:#2b2b2b !important;font-size: 22px !important;}
+nav a.active div, nav a.active div.fa {color:#65ab31 !important;}
+ul li a:active {background-color: #ccc;}
+.text-left {text-align: left;}
+.content-center {position: absolute;width: 200px;height:200px;text-align: center;top:50%;margin-top:-20px;left:50%;margin-left:-100px;}
+.content-center2 {position: absolute;width: 200px;height:200px;text-align: center;top:50%;margin-top:-150px;left:50%;margin-left:-125px;}
+.f1x {font-size: 16px;}
+.f2x {font-size: 20px;}
+.success {background-color: #37a34a;border: 1px solid #37a34a;color:}
+.simple-show-hide {-webkit-transition:all linear 0.5s;transition:all linear 0.5s;}
+.simple-show-hide.ng-hide {opacity:0;}
+.click-active {background-color: #ccc;border: 1px solid rgb(151,167,165);}
+.padding-bottom20 {padding-top:20px;}
+.padding-top20 {padding-bottom:20px;}
+.padding-left20 {padding-left: 20px;}
+.padding-right20 {padding-right: 20px;}
+.withcolor {color:#3cb37a !important;}
+.withcolor .fa {color:#3cb37a !important;}
+
+/** fa **/
+.fa-user-offline:before {content: "\f007";color: gray !important;}
+.fa-user {color: rgb(95,180,27) !important;}
+.fa-thumbs-o-up {color: #37a34a !important;}
+.fa-question-circle {color: #ea5550 !important;}
+.fa-angle-double-down {color: #0068b7 !important;}
+.fa-angle-double-up {color: #56256e !important;}
+.fa-bell {color:#f39800 !important;}
+
+/** redefine bootstrap lib css **/
+.dropdown-menu {z-index: 9999;}
+.dropdown-menu > li > a {line-height: 2.5 !important;}
+
+/** redefine fontawesome lib css **/
+.fa.pull-left {margin-right: 1.3em !important;}
+
+/** app css **/
+.status-summary {margin-top:-85px;padding:10px;width: 100%;text-align: center;border-radius: 5px;text-align: left;position: fixed;background-color: #fff;}
+.status-summary span {margin-right: 5px;margin-bottom: 5px;font-size: 12px;padding:5px 5px;border-radius:5px;border: 1px solid #ccc;display: inline-block;}
+.status-summary span i {margin-right: 5px;}
+.status-flat {float: left;margin: 10px 5px 5px 10px;padding-top:10px;width: 75px;border: 1px solid #ccc;text-align: center;border-radius: 5px;}
+.status-flat i {font-size: 30px;margin-bottom: 5px;}
+.status-flat p {width:100%;font-size: 14px;border-top: 1px solid #ccc;padding-top: 5px;}
+.navigate-right:after, .push-right:after {right: 15px;content: "\e080" !important;}
+.navigate-left:after, .navigate-right:after, .push-left:after, .push-right:after {
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-size: inherit;
+	line-height: 1;
+	color: #bbb;
+	text-decoration: none;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-font-smoothing: antialiased;
+}
+
+/** business css **/
+#login-form {padding-top: 20px;max-width: 600px;margin:auto;width:90%;}
+#login-form .fa {color:black !important;}
+#loginbtn {height:50px;background-color: rgb(29,159,117);border-color: rgb(29,159,117);color: #fff;letter-spacing: 5px;font-size: 18px;}
+.input-group {width: 100%;margin-bottom: 10px;height: 40px;}
+.input-group input {height: 40px;}
+.input-group span {width:50px;}
+
+/** responsive **/
+@media screen and (min-width: 360px) {
+	.status-flat {width:62px;}
+}
+
+@media screen and (min-width: 480px) {
+	.app-content-center {padding-top:40px;}
+	.status-summary {margin-top:-50px;}
+	.status-flat {width:100px;}
+}
+
+@media screen and (min-width: 768px) {
+	.status-summary span {font-size: 14px;}
+	.status-flat {width:120px;}
+}
+
+.sreen-prev, .sreen-next { position: fixed; top: 50%; width: 20px; height: 20px; margin-top: -10px; border:solid 1px #aaa;border-color: #aaa transparent transparent #aaa;}
+.sreen-prev:hover, .sreen-next:hover { border-color: blue transparent transparent blue;}
+.sreen-prev { left: 15px; 
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg); }
+.sreen-next { right: 15px;
+	-webkit-transform: rotate(135deg);
+	   -moz-transform: rotate(135deg);
+	    -ms-transform: rotate(135deg);
+	        transform: rotate(135deg); }
+
+
+/** list-view **/
+.list-a {position: relative;padding-right: 30px;}
+.list-title {margin-left:25px;font-size: 18px;color: black;}
+.list-flag {position: absolute;top:0;bottom:0;}
+.list-flag .fa-times-circle{color:red;}
+.list-flag .fa-check-circle{color:rgb(156,196,24);}
+.list-flag .fa-exclamation-circle{color:#c1ab05;}
+.list-content {margin-left:25px;color:#b4aeb1;font-size: 14px;}
+.list-time {position: absolute;right: 0;top:0;color:#b4aeb1;font-size: 12px;}
+.list-navigate {position: absolute;right: 0;top:20px;}
+.list-navigate .fa {color:#b4aeb1;font-size: 18px;}

@@ -1,0 +1,26 @@
+<header class="app-header">
+	<span class="pull-left"><i class="fa fa-users"></i><label class="title">{{appTitle}}</label></span>
+</header>
+
+<div class="app-content">
+	<form id="login-form">
+		<div class="input-group">
+		  <span class="input-group-addon"><i class="fa fa-user" /></span>
+		  <input type="text" class="form-control" placeholder="工号或学号" ng-model="user.name" />
+		</div>
+
+		<div class="input-group">
+		  <span class="input-group-addon"><i class="fa fa-key" /></span>
+		  <input type="password" class="form-control" placeholder="密码" ng-model="user.password" />
+		</div>
+
+		<input type="button" id="loginbtn" class="btn form-control" value="登录" ng-click="login()" />
+
+		<div class="tips simple-show-hide" ng-init="valid = false" ng-show="valid">
+			<i class="fa fa-times"></i>{{msg}}
+		</div>
+	</form>
+</div>
+
+
+

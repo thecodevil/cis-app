@@ -1,0 +1,42 @@
+<!-- 发布题目列表为空的时候显示 -->
+<div class="content-center2" ng-show="student.exercises.length == 0"><img src="img/empty.png" width="250px" height="200px"/></div>
+
+<!-- 已发布的题目列表 -->
+<div class="app-content">
+  <ul class="list-view">
+  	<li class="list-view-cell cell-media" ng-repeat="exercise in student.exercises" ui-sref="student.exercise({id : exercise.id})">
+  		<a href="javascript:void(0);" class="list-a">
+  			<div class="list-title">{{exercise.exerciseTitle}}</div>
+  			<div class="list-flag"><i class="fa" ng-class="getExerciseStatus(exercise)"></i></div>
+  			<div class="list-content">{{exercise.exerciseContent | cut:true:30:'...'}}</div>
+  			<div class="list-time">{{exercise.createdAt | date:"yyyy-MM-dd hh:mm:ss"}}</div>
+  			<div class="list-navigate"><i class="fa fa-angle-right"></i></div>
+  		</a>
+  	</li>
+  </ul>
+</div>
+
+<!-- 状态反馈按钮组 -->
+<nav class="app-bottom-bar">
+  <a href="javascript:void(0);" class="app-tab-item" ng-class="{'active': student.status == 'fa-thumbs-o-up'}" ng-click="updateStatus('fa-thumbs-o-up')">
+    <div class="fa fa-thumbs-o-up fa-lg"></div>
+    <div>明白</div>
+  </a>
+  <a href="javascript:void(0);" class="app-tab-item" ng-class="{'active': student.status == 'fa-question-circle'}" ng-click="updateStatus('fa-question-circle')">
+    <div class="fa fa-question-circle fa-lg"></div>
+    <div>疑问</div>
+  </a>
+  <a href="javascript:void(0);" class="app-tab-item" ng-class="{'active': student.status == 'fa-angle-double-down'}" ng-click="updateStatus('fa-angle-double-down')">
+    <div class="fa fa-angle-double-down fa-lg"></div>
+    <div>太快</div>
+  </a>
+  <a href="javascript:void(0);" class="app-tab-item" ng-class="{'active': student.status == 'fa-angle-double-up'}" ng-click="updateStatus('fa-angle-double-up')">
+    <div class="fa fa-angle-double-up fa-lg"></div>
+    <div>太慢</div>
+  </a>
+</nav>
+
+<!-- 状态反馈提示框 -->
+<div class="tips simple-show-hide success" ng-init="valid = false" ng-show="valid">
+  <i class="fa fa-check"></i>亲，老师已经收到你的反馈咯!
+</div>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html ng-app="cisApp">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+	<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- lib css -->
+	<link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+	
+	<!-- custom css -->
+	<link href="css/app.css" rel="stylesheet">
+
+	<!-- jquery -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<!-- bootstrap js -->
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+	<!-- angular framework -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+
+	<!-- libs -->
+	<script src="bower_components/socket.io/socket.io.js"></script>
+
+
+	<script src="app.js"></script>
+	<script src="js/service/rest.js"></script>
+	<script src="js/service/sockets.js"></script>
+	<script src="js/service/filters.js"></script>
+	<script src="js/service/directives.js"></script>
+	
+
+	<!-- login controller -->
+	<script src="js/controller/login.js"></script>
+	<!-- student controller -->
+	<script src="js/controller/student/student.root.js"></script>
+	<script src="js/controller/student/student.wait.js"></script>
+	<script src="js/controller/student/student.main.js"></script>
+	<script src="js/controller/student/student.exercise.js"></script>
+
+	<!-- teacher controller -->
+	<script src="js/controller/teacher/teacher.js"></script>
+
+	<script src="js/controller/rootController.js"></script>
+
+	<script src="js/service/studentService.js"></script>
+
+	<!-- course controller -->
+	<script src="js/controller/course/course.root.js"></script>
+	<script src="js/controller/course/course.list.js"></script>
+	<script src="js/controller/course/course.detail.js"></script>
+
+
+	<script src="cordova.js"></script>
+	<script src="phonegap.js"></script>
+	<script type="text/javascript" charset="utf-8">
+
+	   
+	    function onLoad() {
+	    	console.log("onLoad");
+	        document.addEventListener("deviceready", onDeviceReady, false);
+	    }
+	
+	    
+	    function onDeviceReady() {
+	        console.log("onDeviceReady");
+	        document.addEventListener("backbutton", onBackKeyDown, false);
+	    }
+	
+	   
+	    function onBackKeyDown() {
+	    	console.log("onBackKeyDown");
+	    }
+	    
+	    document.addEventListener("backbutton", function(e){
+	    	console.log("onBackKeyDown");
+		    e.preventDefault();
+		}, false);
+
+    </script>
+</head>
+<body>
+	<div class="app-container" ng-controller="rootCtrl" ui-view></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- 头部 -->
+<header class="app-header">
+  <span class="pull-left">
+    <a href="javascript:void(0);" ng-click="returnTo()">
+      <i class="fa fa-angle-left" ng-init="needReturn=false" ng-show="needReturn"></i>
+    </a>
+    <i class="fa fa-users"></i><label class="title">{{appTitle}}</label>
+  </span>
+  <span class="pull-right">
+    <i class="fa fa-ellipsis-v pull-right" data-toggle="dropdown" id="dropdownMenu1"></i>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" ng-click="quit()">退出</a></li>
+    </ul>
+  </span>
+</header>
+
+<div ui-view="main"></div>
+
+<!-- 状态反馈按钮组 -->
+<!-- <div class="app-content" ui-view="main"></div> -->
+<!-- 已经发出的问题列表 -->
+<!-- <div class="app-content">
+  <div class="content-center2" ng-show="postexercises.length == 0"><img src="img/empty.png" width="250px" height="200px"/></div>
+  <ul class="list-view">
+    <li class="list-view-cell cell-media" ng-repeat="postexercise in postexercises">
+      <a href="javascript:void(0);" class="list-a">
+        <div class="list-title">title</div>
+        <div class="list-flag"><i class="fa fa-exclamation-circle"></i></div>
+        <div class="list-content">content</div>
+        <div class="list-time">2014-08-12</div>
+        <div class="list-navigate"><i class="fa fa-angle-right"></i></div>
+      </a>
+    </li>
+  </ul>
+</div> -->

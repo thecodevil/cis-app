@@ -1,0 +1,10 @@
+<ul class="list-view">
+	<li class="list-view-cell cell-media" ng-repeat="exercise in exercises" ui-sref="courses.exercisesdetail({id:exercise.id})">
+		<a href="javascript:void(0);" class="list-a">
+			<div class="list-title">{{exercise.title}}</div>
+			<div class="list-flag"><i class="fa fa-file-text"></i></div>
+			<div class="list-content">{{exercise.content | cut:true:30:'...'}}</div>
+			<div class="list-navigate"><i class="fa fa-angle-right"></i></div>
+		</a>
+	</li>
+</ul>

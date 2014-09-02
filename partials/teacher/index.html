@@ -1,0 +1,39 @@
+<header class="app-header">
+	<span class="pull-left">
+		<a href="javascript:void(0);" ng-click="returnTo()">
+			<i class="fa fa-angle-left" ng-init="$state.needReturn=false" ng-show="$state.needReturn"></i>
+		</a>
+		<i class="fa fa-users"></i><label class="title">互动教室</label>
+	</span>
+	<span class="pull-right">
+		<i class="fa fa-ellipsis-v pull-right" data-toggle="dropdown" id="dropdownMenu1"></i>
+		<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" ng-click="toFlatStatus()">状态视图</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" ng-click="toListStatus()">答题视图</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" ng-click="classOver()">下课</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" ng-click="quit()">退出应用</a></li>
+		</ul>
+	</span>
+</header>
+
+<div class="app-content" ui-view="main"></div>
+
+<!-- 底部工具栏 -->
+<nav class="app-bottom-bar" id="bottom-bar" ng-init="currentView = 'home'">
+	<a class="app-tab-item" href="javascript:void(0);" ui-sref="teacher" ng-class="{'active': $state.currentView == 'home'}" ng-click="$state.needReturn = false;$state.currentView='home'">
+		<div class="glyphicon glyphicon-home"></div>
+		<div class="tab-label">首页</div>
+	</a>
+	<a class="app-tab-item" href="javascript:void(0);" ui-sref="teacher.exercises" ng-class="{'active': $state.currentView == 'exercises'}" ng-click="$state.currentView='exercises'">
+		<div class="glyphicon glyphicon-th-list"></div>
+		<div class="tab-label">题目</div>
+	</a>
+	<a class="app-tab-item" href="javascript:void(0);" ui-sref="teacher.students" ng-class="{'active': $state.currentView == 'students'}" ng-click="$state.currentView='students'">
+		<div class="glyphicon glyphicon-user"></div>
+		<div class="tab-label">学生</div>
+	</a>
+	<a class="app-tab-item" href="javascript:void(0);" ng-class="{'active': $state.currentView == 'settings'}" ng-click="$state.currentView='settings';postOpenQuestion();">
+		<div class="glyphicon glyphicon-volume-up"></div>
+		<div class="tab-label">讨论</div>
+	</a>
+</nav>

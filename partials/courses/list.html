@@ -1,0 +1,11 @@
+<ul class="list-view">
+	<li class="list-view-cell cell-media" ng-repeat="course in courses" ui-sref="courses.detail({id:course.id})">
+		<a href="javascript:void(0);" class="list-a">
+			<div class="list-title">{{course.title}}</div>
+			<div class="list-flag"><i class="fa fa-bell"></i></div>
+			<div class="list-content">{{course.classname}}</div>
+			<div class="list-time">{{course.createdAt | date:"yyyy-MM-dd hh:mm:ss"}}</div>
+			<div class="list-navigate"><i class="fa fa-angle-right"></i></div>
+		</a>
+	</li>
+</ul>

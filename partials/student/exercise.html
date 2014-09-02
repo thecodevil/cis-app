@@ -1,0 +1,65 @@
+<div class="app-content app-content-padding" ng-show="exercise.type != 1">
+  <textarea rows="5" style="margin-top:10px;" placeholder="请填写你充满创意的想法" ng-model='exercise.answer.answer' ng-disabled='!checkAnswered()'></textarea>
+  <ul class="list-view">
+    <li class="list-view-cell cell-media">
+      <div class="cell-media-body">
+        题目标题：{{exercise.exerciseTitle}}
+      </div>
+    </li>
+    <li class="list-view-cell cell-media">
+      <div class="cell-media-body">
+        题目内容：{{exercise.exerciseContent}}
+      </div>
+    </li>
+    <li class="list-view-cell cell-media">
+      <div class="cell-media-body">
+        提问时间：{{exercise.createdAt | date:"yyyy-MM-dd hh:mm:ss"}}
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="app-content app-content-padding" ng-show="exercise.type == 1">
+  <ul class="list-view">
+    <li class="list-view-cell cell-media">
+      <div class="cell-media-body">
+        题目标题：{{exercise.exerciseTitle}}
+      </div>
+    </li>
+    <li class="list-view-cell cell-media">
+      <div class="cell-media-body">
+        题目内容：{{exercise.exerciseContent}}
+      </div>
+    </li>
+    <li class="list-view-cell cell-media">
+      <div class="cell-media-body">
+        提问时间：{{exercise.createdAt | date:"yyyy-MM-dd hh:mm:ss"}}
+      </div>
+    </li>
+  </ul>
+  <p ng-repeat="option in options">
+    <a class="btn btn-default form-control text-left" ng-disabled="!checkAnswered()" ng-class="{'click-active': $index == selected}" ng-click="checkOptionSelect($index, option)">{{option.content}}</a>
+  </p>
+  <div>答案[{{getAlpha() || answer.alpha}}]</div>
+</div>
+
+
+<!-- 交卷，上一题，下一题按钮组 -->
+<nav class="app-bottom-bar" ng-show="checkAnswered()">
+  <a href="javascript:void(0);" class="btn app-tab-item" ng-disabled="checkPostAnswerDisable()" ng-click="postAnswer()">
+    <div class="fa fa-file-text fa-lg"></div>
+    <div>交卷</div>
+  </a>
+  <a href="javascript:void(0);" class="btn app-tab-item" ng-disabled="true">
+    <div class="fa fa-arrow-left fa-lg"></div>
+    <div>上一题</div>
+  </a>
+  <a href="javascript:void(0);" class="btn app-tab-item" ng-disabled="true">
+    <div class="fa fa-arrow-right fa-lg"></div>
+    <div>下一题</div>
+  </a>
+</nav>
+
+<div class="tips simple-show-hide success" ng-init="showTips = false" ng-show="showTips">
+  <p><i class="fa fa-trophy"></i>亲，老师已经收到了你的答案咯!!</p>
+</div>

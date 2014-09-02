@@ -1,0 +1,45 @@
+<div class="padding-left20 padding-right20" ng-show="exercise.type != 1">
+	<ul class="list-view">
+		<li class="list-view-cell cell-media">
+			<div class="cell-media-body">
+				题目名称：{{exercise.title}}
+			</div>
+		</li>
+		<li class="list-view-cell cell-media">
+			<div class="cell-media-body">
+				题目内容：{{exercise.content}}
+			</div>
+		</li>
+		<li class="list-view-cell cell-media">
+			<div class="cell-media-body">
+				参考答案：{{exercise.answer}}
+			</div>
+		</li>
+	</ul>
+</div>
+
+<div class="padding-left20 padding-right20" ng-show="exercise.type == 1">
+	<ul class="list-view">
+		<li class="list-view-cell cell-media">
+			<div class="cell-media-body">
+				题目名称：{{exercise.title}}
+			</div>
+		</li>
+		<li class="list-view-cell cell-media">
+			<div class="cell-media-body">
+				题目内容：{{exercise.content}}
+			</div>
+		</li>
+		<li class="list-view-cell cell-media">
+			<div class="cell-media-body">
+				参考答案：{{exercise.answer}}
+			</div>
+		</li>
+	</ul>
+	<p ng-repeat="option in options">
+	    <span class="btn btn-default form-control text-left">{{option.content}}</span>
+	</p>
+</div>
+
+
+

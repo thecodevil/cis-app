@@ -1,0 +1,10 @@
+<ul class="list-view">
+	<li class="list-view-cell cell-media" ng-repeat="exercise in exercises">
+		<a class="navigate-right" href="javascript:void(0);" ng-click="$state.needReturn=true;toExerciseDetailPage(exercise)">
+			<div class="cell-media-body">
+				{{exercise.title}}
+				<p>{{exercise.content}}</p>
+			</div>
+		</a>
+	</li>
+</ul>

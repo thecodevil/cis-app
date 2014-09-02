@@ -1,0 +1,11 @@
+<ul class="list-view" ng-repeat="perStudentAnswer in perStudentAnswers">
+  <li id="stu-status" class="list-view-cell cell-media">
+  	<a href="javascript:void(0);" ng-click="">
+     <i class="fa fa-lg pull-left" ng-class='student.status'></i>
+     <div class="cell-media-body">
+      {{perStudentAnswer.postExercise.exerciseTitle}}
+      <p>{{perStudentAnswer.answer}}</p>
+     </div>
+    </a>
+  </li>
+</ul>
